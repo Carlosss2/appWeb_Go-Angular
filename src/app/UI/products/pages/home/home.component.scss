@@ -1,0 +1,85 @@
+/* Estilos generales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header moderno y acogedor */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6F61; /* Color cálido relacionado con comida */
+    padding: 15px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .company-name h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header .profile-pic img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mensaje de presentación */
+.greeting {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 2em;
+    color: #333;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.greeting p {
+    margin: 0;
+    background: linear-gradient(90deg, #FF6F61, #FFA07A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre botones */
+    margin: 30px 0;
+}
+
+.button-container .btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFA07A; /* Color cálido */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 120px; /* Ancho fijo para simetría */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-container .btn img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.button-container .btn:hover {
+    background-color: #FF6F61;
+    transform: translateY(-5px);
+}

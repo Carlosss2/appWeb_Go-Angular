@@ -1,0 +1,42 @@
+<div class="product-table">
+    <h2 class="title">🛒 Tus Productos</h2>
+
+    <div class="table-header">
+        <span>ID</span>
+        <span>Nombre</span>
+        <span>Precio</span>
+        <span>Acción</span>
+    </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Nombre </th>
+            <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Precio </th>
+            <td mat-cell *matCellDef="let element"> {{element.Price }} </td>
+        </ng-container>
+
+        <!-- Options Column -->
+        <ng-container matColumnDef="options">
+            <th mat-header-cell *matHeaderCellDef> Opciones </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-raised-button class="btn-action delete" (click)="deleteElement(element.Id)">Eliminar</button>
+                <button mat-raised-button class="btn-action update" (click)="updateElement(element)">Actualizar</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
