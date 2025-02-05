@@ -9,7 +9,7 @@ import { Product } from '../domain/models/product';
 export class CreateProductUseCase{
     constructor(private productGateway: ProductGateway){}
 
-    execute(product: Product): Observable<Product> {
-        return this.productGateway.create(product); 
+    execute(name:string,price:number): Observable<Product> {
+        return this.productGateway.create(name,price); 
       }
 }
