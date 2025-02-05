@@ -30,7 +30,7 @@ export class UpdateProductComponent {
     private dialogRef: MatDialogRef<UpdateProductComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Product
   ) {
-    this.productToUpdate = { ...data }; // Clonar datos para evitar cambios directos en la lista
+    this.productToUpdate = { ...data }; // Clonar datos para evitar cambios directos
   }
 
   updateProduct(): void {
@@ -49,7 +49,7 @@ export class UpdateProductComponent {
         Swal.fire({
           icon: 'success',
           title: 'Producto Actualizado',
-          text: `El producto ${updated.Name} ha sido actualizado con éxito.`,
+          text: `El producto ha sido actualizado con éxito.`,
           confirmButtonColor: '#FF6F61'
         });
         this.dialogRef.close(true);

@@ -18,7 +18,7 @@ import { MatDialogContent } from '@angular/material/dialog';
     MatDialogTitle,
     MatDialogContent,
     MatDialogActions,
-    MatDialogClose,
+    
   ],
   templateUrl: './delete-product.component.html',
   styleUrl: './delete-product.component.scss'
