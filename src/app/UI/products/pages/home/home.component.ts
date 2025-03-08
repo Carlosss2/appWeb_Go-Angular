@@ -3,16 +3,17 @@ import { CreateProductComponentComponent } from '../../components/create-product
 import { GetAllProductComponent } from '../../components/get-all-product/get-all-product.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [GetAllProductComponent, CreateProductComponentComponent,MatDialogModule], // Agrega CreateProductComponentComponent aquí
+  imports: [GetAllProductComponent, CommonModule,MatDialogModule], // Agrega CreateProductComponentComponent aquí
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  
   constructor(private dialog: MatDialog) {}
 
   openAddProductDialog(): void {
