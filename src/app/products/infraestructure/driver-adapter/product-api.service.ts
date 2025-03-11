@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class ProductApiService extends ProductGateway {
 
-  private apiUrl = 'http://localhost:8080/products'; 
+  private apiUrl = 'http://100.25.185.122:8080/products'; 
 
   constructor(private http: HttpClient) {super();}
 
